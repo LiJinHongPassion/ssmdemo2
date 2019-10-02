@@ -6,14 +6,15 @@
 </head>
 <body>
 <form id="register_form">
-    username：<input type="text" name="userName" id="username" />
-    password：<input type="password" name="userPwd" id="pwd" />
+    username:<input type="text" name="userName" id="username" />
+    password:<input type="password" name="userPwd" id="pwd" />
     <button type="button" id="btn_register" onclick="register()">register</button>
 </form>
 
 
 
-<script type="text/javascript" src="js/jquery.js"></script>
+<%--<script type="text/javascript" src="js/jquery.js"></script>--%>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script>
     function register() {
         $.ajax({
@@ -25,7 +26,7 @@
             async:false,
             cache:false,
             success:function(data){
-                alert("username：" + data.userName);
+                alert("username:" + data.userName);
             },
             error:function(data){
             }

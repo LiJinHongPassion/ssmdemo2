@@ -6,14 +6,15 @@
 </head>
 <body>
 <form>
-    username：<input type="text" name="username" id="username" />
-    password：<input type="password" name="pwd" id="pwd" />
+    username:<input type="text" name="username" id="username" />
+    password:<input type="password" name="pwd" id="pwd" />
     <button type="button" id="btn_login" onclick="login()">login</button>
 </form>
 
 
 
-<script type="text/javascript" src="js/jquery.js"></script>
+<%--<script type="text/javascript" src="js/jquery.js"></script>--%>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script>
     function login() {
         var username1 = document.getElementById("username").value;
@@ -30,7 +31,7 @@
             async:false,
             cache:false,
             success:function(data){
-                alert("username：" + data.userName);
+                alert("username:" + data.userName);
             },
             error:function(data){
             }
